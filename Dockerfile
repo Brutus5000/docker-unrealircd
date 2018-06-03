@@ -1,8 +1,10 @@
 FROM debian:jessie
-ENV UNREAL_VERSION="4.0.3" \
-    ANOPE_VERSION="2.0.3" \
+ENV LC_ALL="C" \
     TERM="vt100" \
-    LC_ALL=C
+    UNREAL_VERSION="4.0.3" \
+    ANOPE_VERSION="2.0.3" \
+    MOTD="Message of the Day" \
+    RULES=""
 RUN apt-get update \
  && apt-get upgrade -y \
  && apt-get install -y --no-install-recommends \
